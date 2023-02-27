@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$toolbar-bg: $base-bg !default;
+$toolbar-color: $base-text-color !default;
+$never-used: collector((
+"$toolbar-bg": $toolbar-bg,
+));

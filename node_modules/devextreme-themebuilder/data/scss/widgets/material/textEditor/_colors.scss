@@ -1,0 +1,43 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$texteditor-color: $base-text-color !default;
+$texteditor-placeholder-color: null !default;
+$texteditor-bg: color.change($base-text-color, $alpha: 0.04) !default;
+$texteditor-focused-bg: color.change($base-text-color, $alpha: 0.04) !default;
+$texteditor-border-color: color.change($texteditor-color, $alpha: 0.42) !default;
+$texteditor-hover-border-color: $texteditor-color !default;
+$texteditor-focused-border-color: $base-accent !default;
+$texteditor-hover-bg: color.change($base-text-color, $alpha: 0.07) !default;
+$texteditor-button-clear-icon-color: null !default;
+$texteditor-button-clear-icon-color-bg: null !default;
+$texteditor-invalid-focused-border-color: $base-invalid-color !default;
+$texteditor-invalid-faded-border-color: $base-invalid-faded-border-color !default;
+$texteditor-input-border-radius: $base-border-radius !default;
+
+@if $mode == "light" {
+  $texteditor-placeholder-color: lighten($texteditor-color, 58%) !default;
+  $texteditor-button-clear-icon-color: lighten($texteditor-color, 46%) !default;
+  $texteditor-button-clear-icon-color-bg: lighten($texteditor-color, 76%) !default;
+}
+
+@if $mode == "dark" {
+  $texteditor-placeholder-color: darken($texteditor-color, 50%) !default;
+  $texteditor-button-clear-icon-color: darken($texteditor-color, 76%) !default;
+  $texteditor-button-clear-icon-color-bg: darken($texteditor-color, 34%) !default;
+}
+
+$texteditor-label-color: $texteditor-placeholder-color;
+
+$never-used: collector((
+"$texteditor-color": $texteditor-color,
+"$texteditor-placeholder-color": $texteditor-placeholder-color,
+"$texteditor-bg": $texteditor-bg,
+"$texteditor-focused-bg": $texteditor-focused-bg,
+"$texteditor-border-color": $texteditor-border-color,
+"$texteditor-hover-border-color": $texteditor-hover-border-color,
+"$texteditor-focused-border-color": $texteditor-focused-border-color,
+"$texteditor-hover-bg": $texteditor-hover-bg,
+));

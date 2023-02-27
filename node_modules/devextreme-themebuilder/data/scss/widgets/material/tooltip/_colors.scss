@@ -1,0 +1,25 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../overlay/colors" as *;
+@use "../color" as extcolor;
+
+// adduse
+$tooltip-color: null !default;
+$tooltip-bg: null !default;
+$tooltip-border-radius: $base-border-radius !default;
+
+@if $mode == "light" {
+  $tooltip-color: $base-inverted-text-color !default;
+  $tooltip-bg: #616161 !default;
+}
+
+@if $mode == "dark" {
+  $tooltip-color: $base-text-color !default;
+  $tooltip-bg: rgba(0, 0, 0, 1) !default;
+}
+
+$never-used: collector((
+"$tooltip-color": $tooltip-color,
+"$tooltip-bg": $tooltip-bg,
+));

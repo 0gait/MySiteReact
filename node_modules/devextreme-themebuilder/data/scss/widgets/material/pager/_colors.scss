@@ -1,0 +1,12 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$pager-page-selected-color: $base-inverted-text-color !default;
+$pager-page-hovered-bg: $base-hover-bg !default;
+$pager-page-selected-bg: $base-accent !default;
+$never-used: collector((
+"$pager-page-selected-color": $pager-page-selected-color,
+"$pager-page-selected-bg": $pager-page-selected-bg,
+));

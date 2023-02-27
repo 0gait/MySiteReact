@@ -1,0 +1,33 @@
+export class TaskAreaStateEventNames {
+    public static TASK_AREA_CLICK = "taskAreaClick";
+    public static TASK_AREA_DBLCLICK = "taskAreaDblClick";
+    public static TASK_AREA_SCROLL = "taskAreaScroll";
+    public static TASK_AREA_START_MOVE = "taskAreaStartMove";
+    public static TASK_AREA_PROCESS_MOVE = "taskAreaProcessMove";
+    public static TASK_AREA_END_MOVE = "taskAreaEndMove";
+    public static TASK_AREA_ZOOM_IN = "taskAreaZoomIn";
+    public static TASK_AREA_ZOOM_OUT = "taskAreaZoomOut";
+    public static CONTEXTMENU_SHOW = "contextMenuShow";
+    public static CONTEXTMENU_HIDE = "contextMenuHide";
+    public static DEPENDENCY_SELECTION = "dependencySelection";
+    public static STATE_EXIT = "stateExit";
+    public static TASK_SELECTION = "taskSelection";
+    public static TASK_EDIT_START = "taskEditStart";
+    public static TASK_EDIT_END = "taskEditEnd";
+    public static TASK_LEAVE = "taskLeave";
+    public static TASK_PROCESS_MOVE = "taskProcessMove";
+    public static TASK_END_MOVE = "taskEndMove";
+    public static TASK_PROCESS_PROGRESS = "taskProcessProgress";
+    public static TASK_END_PROGRESS = "taskEndProgress";
+    public static TASK_PROCESS_START = "taskProcessStart";
+    public static TASK_CONFIRM_START = "taskConfirmStart";
+    public static TASK_PROCESS_END = "taskProcessEnd";
+    public static TASK_CONFIRM_END = "taskConfirmEnd";
+    public static GET_DEPENDENCY_POINTS = "getDependencyPoints";
+    public static DEPENDENCY_START = "dependencyStart";
+    public static DEPENDENCY_PROCESS = "dependencyProcess";
+    public static DEPENDENCY_END = "dependencyEnd";
+    public static TASK_AREA_KEY_DOWN = "taskAreaKeyDown";
+    public static GET_POINTERS_INFO = "getPointersInfo";
+    public static GET_COORDINATES_REF_POINT = "getCoordinatesRefPoint";
+}

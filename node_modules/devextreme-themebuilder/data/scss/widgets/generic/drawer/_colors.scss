@@ -1,0 +1,9 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$drawer-shader-background-color: color.change($base-shadow-color, $alpha: 0.5) !default;
+$never-used: collector((
+"$drawer-shader-background-color": $drawer-shader-background-color,
+));

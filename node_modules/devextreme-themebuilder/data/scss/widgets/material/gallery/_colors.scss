@@ -1,0 +1,22 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../color" as extcolor;
+
+// adduse
+$gallery-indicator-bg: $base-bg !default;
+$gallery-indicator-item-selected-bg: $base-accent !default;
+$gallery-indicator-focused-bg: $base-accent !default;
+$gallery-indicator-item-border-color: color.change(#000, $alpha: 0.2) !default;
+$gallery-indicator-selected-border-color: color.change($gallery-indicator-bg, $alpha: 0.8) !default;
+$gallery-navbutton-color: color.change($base-text-color, $alpha: 0.54) !default;
+$gallery-nav-arrow-color: $base-inverted-icon-color !default;
+$gallery-navbutton-hover-color: $base-accent !default;
+$gallery-navbutton-active-color: $base-accent !default;
+$never-used: collector((
+"$gallery-indicator-bg": $gallery-indicator-bg,
+"$gallery-indicator-item-selected-bg": $gallery-indicator-item-selected-bg,
+"$gallery-indicator-focused-bg": $gallery-indicator-focused-bg,
+"$gallery-navbutton-hover-color": $gallery-navbutton-hover-color,
+"$gallery-navbutton-active-color": $gallery-navbutton-active-color,
+));

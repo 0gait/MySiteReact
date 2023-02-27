@@ -1,0 +1,6 @@
+
+  {
+    "module": "../esm/declarations/index",
+    "main": "../cjs/declarations/index"
+  }
+  

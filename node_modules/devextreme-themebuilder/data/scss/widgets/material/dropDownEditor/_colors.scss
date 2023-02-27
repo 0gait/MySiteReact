@@ -1,0 +1,13 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../button/colors" as *;
+@use "../textEditor/colors" as *;
+
+// adduse
+
+$dropdowneditor-icon-color: $base-spin-icon-color !default;
+$dropdowneditor-icon-active-color: $base-spin-icon-color !default;
+$never-used: collector((
+"$dropdowneditor-icon-active-color": $dropdowneditor-icon-active-color,
+));

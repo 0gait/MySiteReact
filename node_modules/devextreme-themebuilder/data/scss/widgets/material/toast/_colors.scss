@@ -1,0 +1,19 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$toast-color: color.change(#fff, $alpha: 0.87) !default;
+$toast-border-radius: $base-border-radius !default;
+$toast-default-bg: color.change(#000, $alpha: 0.87) !default;
+$toast-info-bg: $toast-default-bg !default;
+$toast-warning-bg: $base-warning !default;
+$toast-error-bg: $base-danger !default;
+$toast-success-bg: $base-success !default;
+$never-used: collector((
+"$toast-color": $toast-color,
+"$toast-info-bg": $toast-info-bg,
+"$toast-warning-bg": $toast-warning-bg,
+"$toast-error-bg": $toast-error-bg,
+"$toast-success-bg": $toast-success-bg,
+));

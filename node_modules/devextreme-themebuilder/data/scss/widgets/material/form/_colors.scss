@@ -1,0 +1,13 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$form-field-item-color: color.change($base-label-color, $alpha: 0.6) !default;
+$form-group-border-color: $base-border-color !default;
+$form-field-required-color: $form-field-item-color !default;
+$form-field-mark-color: $form-field-item-color !default;
+$never-used: collector((
+"$form-field-item-color": $form-field-item-color,
+"$form-group-border-color": $form-group-border-color,
+));

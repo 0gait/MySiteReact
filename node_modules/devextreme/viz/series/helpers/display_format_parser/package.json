@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../../cjs/viz/series/helpers/display_format_parser.js",
+  "module": "../../../../esm/viz/series/helpers/display_format_parser.js"
+}

@@ -1,0 +1,12 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../color" as extcolor;
+
+// adduse
+$badge-color: $base-inverted-text-color !default;
+$badge-bg: $base-accent !default;
+$never-used: collector((
+"$badge-color": $badge-color,
+"$badge-bg": $badge-bg,
+));

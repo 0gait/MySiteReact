@@ -1,0 +1,6 @@
+
+  {
+    "module": "../esm/react/index",
+    "main": "../cjs/react/index"
+  }
+  

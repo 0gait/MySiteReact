@@ -1,0 +1,37 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../color" as extcolor;
+
+// adduse
+$tagbox-tag-color: color.change($base-text-color, $alpha: 0.6) !default;
+$tagbox-tag-bg: null !default;
+$tagbox-tag-hover-bg: null !default;
+$tagbox-tag-active-color: $base-text-color !default;
+$tagbox-tag-button-remove-bg: rgba(0, 0, 0, 0.36) !default;
+$tagbox-tag-button-remove-color: null !default;
+$tagbox-tag-focused-bg: null !default;
+$tagbox-select-all-border-color: $base-border-color !default;
+
+@if $mode == "light" {
+  $tagbox-tag-bg: darken($base-bg, 12%) !default;
+  $tagbox-tag-hover-bg: darken($base-bg, 15%) !default;
+  $tagbox-tag-button-remove-color: $tagbox-tag-bg !default;
+  $tagbox-tag-focused-bg: darken($base-bg, 32%) !default;
+}
+
+@if $mode == "dark" {
+  $tagbox-tag-bg: lighten($base-bg, 12%) !default;
+  $tagbox-tag-hover-bg: lighten($base-bg, 15%) !default;
+  $tagbox-tag-button-remove-color: lighten($base-bg, 22%) !default;
+  $tagbox-tag-focused-bg: lighten($base-bg, 32%) !default;
+}
+
+$tagbox-tag-disabled-bg: $tagbox-tag-focused-bg !default;
+
+$never-used: collector((
+"$tagbox-tag-color": $tagbox-tag-color,
+"$tagbox-tag-bg": $tagbox-tag-bg,
+"$tagbox-tag-active-color": $tagbox-tag-active-color,
+"$tagbox-tag-button-remove-bg": $tagbox-tag-button-remove-bg,
+));

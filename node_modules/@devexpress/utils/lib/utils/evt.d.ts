@@ -1,0 +1,17 @@
+export declare class EvtUtils {
+    static preventEvent(evt: Event): void;
+    static getEventSource(evt: Event): HTMLElement | null;
+    static getEventSourceByPosition(evt: MouseEvent | TouchEvent): HTMLElement | null;
+    private static getEventSourceCore;
+    static getMouseWheelEventName(): string;
+    static isLeftButtonPressed(evt: Event): boolean;
+    private static isMoveEventName;
+    private static getMoveEventName;
+    static preventEventAndBubble(evt: Event): void;
+    private static clientEventRequiresDocScrollCorrection;
+    static getEventX(evt: MouseEvent | TouchEvent): number;
+    static getEventY(evt: MouseEvent | TouchEvent): number;
+    static cancelBubble(evt: Event): void;
+    static getWheelDelta(evt: WheelEvent): number;
+}
+//# sourceMappingURL=evt.d.ts.map

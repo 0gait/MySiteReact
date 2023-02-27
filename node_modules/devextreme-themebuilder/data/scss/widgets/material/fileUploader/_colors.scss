@@ -1,0 +1,13 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$fileuploader-filename-color: $base-text-color !default;
+$fileuploader-falename-status-color: lighten($fileuploader-filename-color, 40%) !default;
+$fileuploader-border-color: $base-border-color !default;
+$never-used: collector((
+"$fileuploader-filename-color": $fileuploader-filename-color,
+"$fileuploader-falename-status-color": $fileuploader-falename-status-color,
+"$fileuploader-border-color": $fileuploader-border-color,
+));

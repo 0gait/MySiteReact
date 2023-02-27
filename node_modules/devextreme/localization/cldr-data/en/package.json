@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../cjs/localization/cldr-data/en.js",
+  "module": "../../../esm/localization/cldr-data/en.js"
+}

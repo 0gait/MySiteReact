@@ -1,0 +1,778 @@
+$PageBackgroundColor: white;
+$PageShadowColor: rgba(0, 0, 0, 0.5);
+$PagesGridColor: rgba(0, 0, 0, 0.15);
+$PagesGridLineWidth: 2;
+$GridMajorColor: rgba(0, 0, 0, 0.1);
+$GridMinorColor: rgba(0, 0, 0, 0.05);
+
+$FontName: arial, helvetica, sans-serif;
+$FonSize: 10pt;
+$FontColor: black;
+$FillColor: white;
+$LineColor: black;
+$LineWidth: 2;
+$LineWidthPx: 2px;
+
+$SelectionBorderColor: dodgerblue;
+$SelectionBorderColorUnfocused: #666;
+$SelectionBackColor: rgba(30, 144, 255, 0.02);
+$SelectionBackColorUnfocused: rgba(144, 144, 144, 0.02);
+$SelectionRectBorderColor: dodgerblue;
+$SelectionRectBackColor: rgba(30, 144, 255, 0.2);
+$SelectionRectLineWidth: 1;
+$SelectionMarkLineWidth: 2;
+$MultiSelectionRectLineWidth: 1;
+$GeometryMarkBorderColor: goldenrod;
+$GeometryMarkBorderColorUnfocused: #666;
+$ConnectionPointBorderColor: orchid;
+$ConnectionMarkBorderColor: orchid;
+$ConnectionTargetBorderColor: orchid;
+$ConnectionTargetBorderWidth: 2;
+$ExtensionLineColor: dodgerblue;
+$ExtensionLineWidth: 1;
+$ResizeInfoTextColor: rgba(0, 0, 0, 0.8);
+$ResizeInfoColor: rgba(0, 0, 0, 0.3);
+$ResizeInfoLineWidth: 1;
+$LockedSelectionMarkLineWidth: 1;
+$LockedSelectionMarkColor: #666;
+
+
+.dxdi-control {
+    overflow: visible;
+    box-sizing: border-box;
+    position: relative;
+
+    &.dxdi-read-only {
+        .dxdi-canvas {
+            &.dxdi-drag-scroll {
+                cursor: grab !important; // stylelint-disable-line declaration-no-important
+                .shape,
+                .shape-expand-btn,
+                text {
+                    cursor: grab;
+                }
+            }
+
+            .shape,
+            .shape-expand-btn,
+            text {
+                cursor: default;
+            }
+        }
+    }
+
+    .dxdi-canvas {
+        display: block;
+        background-color: #d9d9d9;
+        transform-origin: 0 0;
+        overflow: hidden; /* Fix excess scroll size in IE */
+    }
+}
+
+.dxdi-canvas {
+    &.dxdi-drag-scroll {
+        cursor: grab !important; // stylelint-disable-line declaration-no-important
+        .shape,
+        .shape .shape-expand-btn,
+        .connector,
+        .connection-point,
+        .connector text,
+        .connector-side-mark.vertical,
+        .connector-side-mark.horizontal,
+        .selection-mark[data-type="9"][data-value="1"],
+        .selection-mark[data-type="9"][data-value="2"],
+        .selection-mark[data-type="9"][data-value="3"],
+        .selection-mark[data-type="9"][data-value="4"],
+        .selection-mark[data-type="9"][data-value="5"],
+        .selection-mark[data-type="9"][data-value="6"],
+        .selection-mark[data-type="9"][data-value="7"],
+        .selection-mark[data-type="9"][data-value="8"],
+        .selection-mark[data-type="4"],
+        .selection-mark[data-type="5"] {
+            cursor: grab;
+        }
+    }
+
+    * {
+        user-select: none;
+    }
+
+    text {
+        font-family: $FontName;
+        font-size: $FonSize;
+    }
+
+    .page {
+        fill: white;
+    }
+
+    .pages-grid-line {
+        fill: none;
+        stroke: $PagesGridColor;
+        stroke-dasharray: 8;
+        stroke-width: $PagesGridLineWidth;
+    }
+
+    .grid-outer-line,
+    .grid-inner-line {
+        fill: none;
+    }
+
+    .grid-outer-line {
+        stroke: $GridMajorColor;
+    }
+
+    .grid-inner-line {
+        stroke: $GridMinorColor;
+    }
+
+    .shape,
+    .toolbox-item {
+        pointer-events: bounding-box;
+
+        rect,
+        path,
+        line,
+        ellipse {
+            fill: $FillColor;
+            stroke-width: $LineWidth;
+            stroke: $LineColor;
+        }
+
+        text {
+            fill: $FontColor;
+            text-anchor: middle;
+        }
+
+        rect.selector {
+            stroke-width: 48;
+            stroke: transparent;
+            fill: transparent;
+            pointer-events: initial;
+        }
+    }
+
+    .shape.not-valid {
+        rect,
+        path,
+        line,
+        ellipse {
+            stroke: red !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+
+    .shape {
+        cursor: move;
+
+        &.text-input > text {
+            display: none;
+        }
+
+        &.container {
+            & > rect:first-child {
+                fill: transparent;
+            }
+        }
+
+        .shape-expand-btn {
+            cursor: pointer;
+
+            & > rect,
+            & > path {
+                stroke-dasharray: initial !important; // stylelint-disable-line declaration-no-important
+            }
+
+            & > path {
+                stroke-width: $LineWidth !important; // stylelint-disable-line declaration-no-important
+            }
+        }
+
+        .dxdi-image {
+            .dxdi-spinner {
+                animation: loading-spinner 1s linear infinite;
+
+                ellipse {
+                    stroke: $LineColor;
+                    stroke-opacity: 0.2;
+                }
+
+                path {
+                    stroke: #fd7010;
+                    stroke-linecap: round;
+                }
+
+                ellipse,
+                path {
+                    fill: none;
+                    stroke-width: 5;
+                }
+            }
+
+            @keyframes loading-spinner {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .dxdi-user {
+                .dxdi-background {
+                    fill: $LineColor;
+                    opacity: 0.2;
+                    stroke: none;
+                }
+
+                ellipse,
+                path {
+                    fill: $FillColor;
+                    stroke: none;
+                }
+            }
+
+            .dxdi-warning {
+                ellipse {
+                    stroke: none;
+                    fill: #ee1616;
+                }
+
+                rect {
+                    stroke: none;
+                    fill: $FillColor;
+                }
+            }
+        }
+    }
+
+    .shape.locked,
+    .shape.locked + .container-children .shape {
+        cursor: inherit !important; // stylelint-disable-line declaration-no-important
+
+        .shape-expand-btn {
+            cursor: inherit !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+
+    .container-children {
+        .shape {
+            .selector {
+                stroke-width: 8;
+            }
+        }
+    }
+
+    .toolbox-item {
+        cursor: pointer;
+
+        .selector {
+            stroke-width: 0 !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+
+    .connector {
+        path,
+        line {
+            stroke-width: $LineWidth;
+            stroke: $LineColor;
+            stroke-linejoin: round;
+            pointer-events: stroke;
+        }
+
+        path:not(.outlined-line-ending):not(.filled-line-ending) {
+            fill: none !important; // stylelint-disable-line declaration-no-important
+        }
+
+        path.outlined-line-ending {
+            fill: $PageBackgroundColor;
+        }
+
+        path.filled-line-ending {
+            fill: $LineColor;
+        }
+
+        path.selector,
+        line.selector {
+            stroke-width: 16;
+            stroke: transparent;
+        }
+
+        text {
+            cursor: move;
+            fill: $FontColor;
+            text-anchor: middle;
+        }
+
+        .text-filter-flood {
+            flood-color: $PageBackgroundColor;
+        }
+    }
+
+    .connector.not-valid {
+        path,
+        line {
+            stroke: red !important; // stylelint-disable-line declaration-no-important
+        }
+    }
+
+    .connector.can-move {
+        cursor: move;
+    }
+
+    .selection-mark,
+    .geometry-mark,
+    .connection-point,
+    .connection-mark,
+    .connector-point-mark,
+    .connector-side-mark {
+        fill: $PageBackgroundColor;
+        stroke-width: $SelectionMarkLineWidth;
+    }
+
+    .selection-mark {
+        stroke: $SelectionBorderColor;
+    }
+
+    .selection-mark[data-type="9"][data-value="1"] {
+        cursor: nw-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="2"] {
+        cursor: ne-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="3"] {
+        cursor: se-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="4"] {
+        cursor: sw-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="5"] {
+        cursor: n-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="6"] {
+        cursor: e-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="7"] {
+        cursor: s-resize;
+    }
+
+    .selection-mark[data-type="9"][data-value="8"] {
+        cursor: w-resize;
+    }
+
+    .selection-mark[data-type="4"],
+    .selection-mark[data-type="5"] {
+        cursor: move;
+    }
+
+    .locked-selection-mark {
+        fill: $PageBackgroundColor;
+        stroke-width: $LockedSelectionMarkLineWidth;
+        stroke: $LockedSelectionMarkColor;
+    }
+
+    .geometry-mark {
+        cursor: pointer;
+        stroke: $GeometryMarkBorderColor;
+    }
+
+    .container-target,
+    .connection-target {
+        fill: transparent;
+        stroke: $ConnectionTargetBorderColor;
+        stroke-width: $ConnectionTargetBorderWidth;
+        pointer-events: none;
+    }
+
+    .connection-point {
+        cursor: crosshair;
+        stroke: $ConnectionPointBorderColor;
+    }
+
+    .connection-point.not-valid {
+        stroke: grey !important; // stylelint-disable-line declaration-no-important
+        display: none;
+    }
+
+    .connection-mark {
+        cursor: crosshair;
+        stroke: $ConnectionMarkBorderColor;
+    }
+
+    .connection-point.selector,
+    .connection-mark.selector {
+        stroke-width: 10px;
+        stroke: transparent;
+        fill: transparent;
+    }
+
+    .connection-point.active {
+        fill: $ConnectionPointBorderColor;
+    }
+
+    .connection-mark.active {
+        fill: $ConnectionMarkBorderColor;
+    }
+
+    .connector-point-mark,
+    .connector-side-mark {
+        cursor: move;
+        stroke: $SelectionBorderColor;
+    }
+
+    .connector-point-mark.disabled {
+        cursor: default;
+        display: none;
+    }
+
+    .connector-side-mark {
+        fill: $SelectionBorderColor;
+    }
+
+    .connector-side-mark.vertical {
+        cursor: col-resize;
+    }
+
+    .connector-side-mark.horizontal {
+        cursor: row-resize;
+    }
+
+    .item-selection-rect,
+    .items-selection-rect {
+        fill: transparent;
+        stroke-width: $SelectionRectLineWidth;
+        stroke: $SelectionBorderColor;
+        stroke-dasharray: 2px;
+        pointer-events: none;
+    }
+
+    .items-selection-rect {
+        fill: $SelectionBackColor;
+    }
+
+    .item-multi-selection-rect {
+        fill: $SelectionBackColor;
+        stroke-width: $MultiSelectionRectLineWidth;
+        stroke: $SelectionBorderColor;
+        pointer-events: none;
+    }
+
+    .selection-rect {
+        fill: $SelectionRectBackColor;
+        stroke-width: $SelectionRectLineWidth;
+        stroke: $SelectionRectBorderColor;
+        pointer-events: none;
+    }
+
+    .connector-selection,
+    .connector-multi-selection {
+        fill: transparent;
+        stroke-width: 1;
+        stroke: $SelectionBorderColor;
+        pointer-events: none;
+    }
+
+    .connector-selection.text,
+    .connector-multi-selection.text {
+        fill: transparent;
+        stroke-width: 1;
+    }
+
+    .connector-selection {
+        stroke-dasharray: 2px;
+    }
+
+    .connector-selection-mask {
+        rect {
+            fill: black;
+        }
+
+        rect.background {
+            fill: white;
+        }
+
+        path,
+        line {
+            fill: white;
+            stroke: black;
+            stroke-width: 4;
+        }
+
+        text {
+            text-anchor: middle;
+        }
+    }
+
+    .extension-line {
+        path {
+            stroke: $ExtensionLineColor;
+            stroke-width: $ExtensionLineWidth;
+        }
+
+        path.size-line {
+            stroke-dasharray: 4px;
+        }
+
+        text {
+            fill: $ExtensionLineColor;
+            font-size: 0.8em;
+            text-anchor: middle;
+        }
+
+        &.center > path.size-line,
+        &.page > path.size-line {
+            stroke-dasharray: 0;
+        }
+
+        &:not(.center) > path:not(:first-child) {
+            display: none;
+        }
+    }
+
+    .resize-info {
+        text {
+            fill: $ResizeInfoTextColor;
+            font-size: 0.8em;
+            text-anchor: middle;
+        }
+
+        rect {
+            fill: $PageBackgroundColor;
+            stroke: $ResizeInfoColor;
+            stroke-width: $ResizeInfoLineWidth;
+        }
+    }
+}
+
+.dxdi-canvas .dxdi-active-selection .shape {
+    cursor: default;
+}
+
+.dxdi-control:not(.focused) .dxdi-canvas {
+    .selection-mark {
+        stroke: $SelectionBorderColorUnfocused;
+    }
+
+    .geometry-mark {
+        stroke: $GeometryMarkBorderColorUnfocused;
+    }
+
+    .item-selection-rect,
+    .items-selection-rect {
+        fill: transparent;
+        stroke: $SelectionBorderColorUnfocused;
+    }
+
+    .items-selection-rect {
+        fill: $SelectionBackColorUnfocused;
+    }
+
+    .item-multi-selection-rect {
+        fill: $SelectionBackColorUnfocused;
+        stroke: $SelectionBorderColorUnfocused;
+    }
+
+    .connection-point,
+    .connection-point.selector,
+    .connection-mark,
+    .connection-mark.selector {
+        display: none;
+    }
+
+    .connector-selection,
+    .connector-multi-selection {
+        stroke: $SelectionBorderColorUnfocused;
+    }
+
+    .connector-point-mark,
+    .connector-side-mark {
+        stroke: $SelectionBorderColorUnfocused;
+    }
+
+    .connector-side-mark {
+        fill: $SelectionBorderColorUnfocused;
+    }
+}
+
+.dxdi-dragging,
+.dxdi-dragging * {
+    user-select: none;
+}
+
+.dxdi-canvas.export {
+    * {
+        cursor: inherit !important; // stylelint-disable-line declaration-no-important
+        pointer-events: all !important; // stylelint-disable-line declaration-no-important
+    }
+}
+
+.dxdi-touch-action {
+    touch-action: none;
+}
+
+.dxdi-toolbox,
+.dxdi-toolbox svg {
+    user-select: none;
+    outline: none;
+}
+
+.dxdi-toolbox,
+.dxdi-toolbox .dxdi-canvas,
+.dxdi-toolbox-drag-item .dxdi-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.dxdi-toolbox .dxdi-canvas .toolbox-item {
+    rect,
+    path,
+    line,
+    ellipse {
+        fill: transparent;
+        stroke: currentColor;
+    }
+
+    .dxdi-image-placeholder {
+        opacity: 0.75;
+        fill: currentColor;
+        stroke: none;
+    }
+
+    .dxdi-shape-text {
+        opacity: 0.25;
+    }
+}
+
+.dxdi-toolbox .dxdi-canvas .toolbox-item,
+.dxdi-toolbox-drag-item .dxdi-canvas {
+    text {
+        font-weight: bold;
+        font-family: "Segoe UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+        fill: currentColor;
+    }
+}
+
+.dxdi-toolbox-drag-item .dxdi-canvas {
+    .dxdi-image-placeholder {
+        opacity: 0.75;
+        fill: currentColor;
+        stroke: none;
+    }
+
+    .dxdi-shape-text {
+        display: none;
+    }
+}
+
+.dxdi-toolbox .toolbox-text-item {
+    cursor: pointer;
+    user-select: none;
+    margin: 0 0 0.6em;
+}
+
+.dxdi-toolbox-drag-item,
+.dxdi-toolbox-drag-text-item {
+    font-family: $FontName;
+    font-size: $FonSize;
+    color: $FontColor;
+    position: absolute;
+    z-index: 10000;
+    pointer-events: none !important; // stylelint-disable-line declaration-no-important
+
+    & * {
+        pointer-events: none !important; // stylelint-disable-line declaration-no-important
+    }
+}
+
+.dxdi-toolbox-drag-item text {
+    pointer-events: none;
+}
+
+.dxdi-toolbox-drag-text-item {
+    background-color: $PageBackgroundColor;
+    border: $LineWidthPx solid $LineColor;
+    padding: 0.5em;
+}
+
+.dxdi-tb-drag-captured {
+    display: none;
+}
+
+.dxdi-focus-input,
+.dxdi-text-input-container,
+.dxdi-text-input {
+    padding: 0;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.dxdi-clipboard-input,
+.dxdi-focus-input {
+    position: absolute;
+    overflow: hidden;
+    left: -1000px !important; // stylelint-disable-line declaration-no-important
+    top: -1000px !important; // stylelint-disable-line declaration-no-important
+    opacity: 0;
+    z-index: -100; // for Safari
+    font-size: 16px; // prevent auto-zooming for iPhone
+}
+
+.dxdi-text-input-container {
+    display: none;
+}
+
+.dxdi-text-input-container.shape-text,
+.dxdi-text-input-container.connector-text {
+    display: inherit;
+    position: absolute;
+    overflow: hidden;
+    background-color: transparent;
+    transform-origin: 0 0;
+}
+
+.dxdi-text-input-container.shape-text .dxdi-text-input {
+    display: table-cell;
+    overflow: hidden;
+    padding: 1px 0 0;
+    outline: none;
+    background-color: transparent;
+    font-family: $FontName;
+    font-size: $FonSize;
+    color: $FontColor;
+    line-height: 1.1em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dxdi-text-input-container.connector-text {
+    overflow: visible;
+}
+
+.dxdi-text-input-container.connector-text .dxdi-text-input {
+    padding: 2px;
+    outline: none;
+    height: calc(1.1em + 6px);
+    width: calc(8em + 6px);
+    margin-top: calc(-0.55em - 3px);
+    margin-left: calc(-4em - 3px);
+    background-color: $PageBackgroundColor;
+    border: $SelectionRectLineWidth + px solid $SelectionBorderColor;
+    font-family: $FontName;
+    font-size: $FonSize;
+    color: $FontColor;
+    line-height: 1.1em;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.dxdi-page-shadow {
+    fill: #808080;
+}

@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../../cjs/ui/toolbar/strategy/toolbar.singleline.js",
+  "module": "../../../../esm/ui/toolbar/strategy/toolbar.singleline.js"
+}

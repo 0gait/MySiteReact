@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "removeComments": true,
+      "target": "es5",
+      "outDir": "./dist/",
+      "typeRoots": ["../node_modules/@types"],
+      "types": ["jasmine"],
+      "lib": ["dom", "es6"],
+      "importHelpers": true
+    },
+    "include": ["src/**/*", "spec/**/*"]
+  }

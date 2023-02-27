@@ -1,0 +1,78 @@
+@use "sass:color";
+@use "colors" as *;
+@use "../colors" as *;
+@use "sizes" as *;
+@use "../sizes" as *;
+@use "../../base/icons" as *;
+@use "mixins" as *;
+@use "../../base/button";
+
+// adduse
+
+.dx-button-text {
+  line-height: $generic-button-text-line-height;
+}
+
+.dx-button a {
+  text-decoration: none;
+}
+
+.dx-button {
+  @include dx-button-onlyicon-sizing();
+}
+
+.dx-button-has-icon {
+  @include dx-button-onlyicon-sizing();
+}
+
+.dx-button-has-text {
+  @include dx-button-withtext-sizing();
+}
+
+.dx-button-back {
+  @include dx-button-onlyicon-sizing();
+
+  .dx-button-text {
+    display: none;
+  }
+}
+
+// NOTE: Button styles
+
+.dx-button { // stylelint-disable-line no-duplicate-selectors
+  @include dx-button-styling();
+}
+
+.dx-button-mode-contained {
+  @include dx-button-mode-contained-styling();
+}
+
+.dx-button-mode-outlined {
+  @include dx-button-mode-outlined-styling();
+}
+
+.dx-button-mode-text {
+  @include dx-button-mode-text-styling();
+}
+
+.dx-button-normal,
+.dx-button-back {
+  @include dx-button-special-hover($button-special-hover);
+}
+
+.dx-texteditor-buttons-container {
+  > .dx-button {
+    margin: 1px $generic-editor-custom-button-margin;
+
+    > .dx-button-content {
+      padding-top: $generic-editor-button-top-padding;
+      padding-bottom: $generic-editor-button-bottom-padding;
+    }
+
+    &.dx-button-has-icon:not(.dx-button-has-text) {
+      > .dx-button-content {
+        padding: $generic-editor-button-icononly-top-padding $generic-editor-button-icononly-horizontal-padding $generic-editor-button-icononly-bottom-padding;
+      }
+    }
+  }
+}

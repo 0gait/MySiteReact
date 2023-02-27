@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../../cjs/exporter/jspdf/autotable/export.js",
+  "module": "../../../../esm/exporter/jspdf/autotable/export.js"
+}

@@ -1,0 +1,115 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../button/colors" as *;
+
+// adduse
+$tabs-tab-color: $base-text-color !default;
+$tabs-tab-selected-color: null !default;
+$tabs-tab-bg: null !default;
+$tabs-tab-selected-bg: null !default;
+$tabs-tab-icon-color: null !default;
+$tabs-tab-icon-selected-color: null !default;
+$tabs-tab-button-disabled-opacity: $button-disabled-icon-opacity !default;
+$tabs-border-color: $base-border-color !default;
+$tabs-focused-border-color: null !default;
+$tabs-tab-hover-bg: null !default;
+$tabs-tab-active-bg: null !default;
+
+@if $color == "carmine" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: darken($base-bg, 2%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $tabs-tab-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-selected-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-hover-bg !default;
+  $tabs-tab-active-bg: color.change(darken($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+@if $color == "contrast" {
+  $tabs-tab-bg: $base-bg !default;
+  $tabs-tab-hover-bg: $base-hover-color !default;
+  $tabs-tab-selected-bg: $base-inverted-bg !default;
+  $tabs-tab-selected-color: $base-inverted-text-color !default;
+  $tabs-tab-icon-color: $base-icon-color !default;
+  $tabs-tab-icon-selected-color: $base-inverted-text-color !default;
+  $tabs-focused-border-color: $base-focus-color !default;
+  $tabs-tab-active-bg: $base-inverted-bg !default;
+}
+
+@if $color == "dark" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: lighten($base-bg, 3%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $tabs-tab-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-selected-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-element-bg !default;
+  $tabs-tab-active-bg: color.change(lighten($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+@if $color == "darkmoon" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: darken($base-bg, 3%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $tabs-tab-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-selected-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-element-bg !default;
+  $tabs-tab-active-bg: color.change(lighten($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+@if $color == "darkviolet" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: lighten($base-bg, 3%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $tabs-tab-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-selected-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-hover-bg !default;
+  $tabs-tab-active-bg: color.change(lighten($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+@if $color == "greenmist" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: darken($base-bg, 3%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $tabs-tab-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-selected-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-element-bg !default;
+  $tabs-tab-active-bg: color.change(darken($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+@if $color == "light" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: darken($base-bg, 3%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $tabs-tab-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-selected-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-element-bg !default;
+  $tabs-tab-active-bg: color.change(darken($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+@if $color == "softblue" {
+  $tabs-tab-selected-color: $base-text-color !default;
+  $tabs-tab-bg: darken($base-bg, 3%) !default;
+  $tabs-tab-selected-bg: $base-bg !default;
+  $tabs-tab-icon-color: $base-icon-color !default;
+  $tabs-tab-icon-selected-color: $tabs-tab-icon-color !default;
+  $tabs-focused-border-color: $base-focus-bg !default;
+  $tabs-tab-hover-bg: $base-element-bg !default;
+  $tabs-tab-active-bg: color.change(darken($tabs-tab-bg, 62.5%), $alpha: 0.2) !default;
+}
+
+$never-used: collector((
+"$tabs-tab-color": $tabs-tab-color,
+"$tabs-tab-selected-color": $tabs-tab-selected-color,
+"$tabs-tab-bg": $tabs-tab-bg,
+"$tabs-tab-selected-bg": $tabs-tab-selected-bg,
+"$tabs-border-color": $tabs-border-color,
+"$tabs-focused-border-color": $tabs-focused-border-color,
+"$tabs-tab-hover-bg": $tabs-tab-hover-bg,
+));

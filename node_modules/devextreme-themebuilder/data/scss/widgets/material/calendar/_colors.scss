@@ -1,0 +1,27 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../button/colors" as *;
+
+// adduse
+
+$calendar-color: $base-text-color !default;
+$calendar-header-color: lighten($calendar-color, 40%) !default;
+$calendar-cell-other-color: lighten($calendar-color, 49%) !default;
+$calendar-cell-other-hover-color: lighten($calendar-color, 49%) !default;
+$calendar-bg: $base-bg !default;
+$calendar-hover-bg: $base-hover-bg !default;
+$calendar-cell-hover-color: $calendar-color !default;
+$calendar-cell-selected-bg: $base-accent !default;
+$calendar-cell-active-bg: color.change(darken($calendar-bg, 62.5%), $alpha: 0.2) !default;
+$calendar-navigator-border-radius: $button-border-radius !default;
+$calendar-cell-contoured-border-radius: 50% !default;
+$calendar-invalid-focused-border-color: $base-invalid-color !default;
+$calendar-invalid-faded-border-color: $base-invalid-faded-border-color !default;
+$calendar-shevron-icon-color: $base-accent !default;
+$never-used: collector((
+"$calendar-header-color": $calendar-header-color,
+"$calendar-cell-other-color": $calendar-cell-other-color,
+"$calendar-cell-selected-bg": $calendar-cell-selected-bg,
+"$calendar-shevron-icon-color": $calendar-shevron-icon-color,
+));

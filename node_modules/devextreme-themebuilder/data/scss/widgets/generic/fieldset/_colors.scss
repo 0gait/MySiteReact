@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$fieldset-field-label-color: $base-label-color !default;
+$fieldset-field-value-invalid-color: $base-invalid-color !default;
+$never-used: collector((
+"$fieldset-field-label-color": $fieldset-field-label-color,
+));

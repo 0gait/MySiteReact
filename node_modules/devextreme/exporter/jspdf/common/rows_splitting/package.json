@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../../cjs/exporter/jspdf/common/rows_splitting.js",
+  "module": "../../../../esm/exporter/jspdf/common/rows_splitting.js"
+}

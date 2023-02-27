@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../../cjs/ui/toolbar/internal/ui.toolbar.menu.list.js",
+  "module": "../../../../esm/ui/toolbar/internal/ui.toolbar.menu.list.js"
+}

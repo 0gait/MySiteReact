@@ -1,0 +1,9 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+
+// adduse
+$textbox-search-icon-color: $base-icon-color !default;
+$never-used: collector((
+"$textbox-search-icon-color": $textbox-search-icon-color,
+));

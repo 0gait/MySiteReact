@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "main": "../../../../cjs/exporter/jspdf/autotable/export_data_grid.js",
+  "module": "../../../../esm/exporter/jspdf/autotable/export_data_grid.js"
+}

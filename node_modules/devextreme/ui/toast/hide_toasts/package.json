@@ -1,0 +1,6 @@
+{
+  "sideEffects": false,
+  "main": "../../../cjs/ui/toast/hide_toasts.js",
+  "module": "../../../esm/ui/toast/hide_toasts.js",
+  "typings": "../hide_toasts.d.ts"
+}

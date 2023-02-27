@@ -1,0 +1,16 @@
+@use "sass:color";
+@use "../sizes" as *;
+@use "../colors" as *;
+@use "../color" as extcolor;
+
+// adduse
+$progressbar-bg: color.change($base-accent, $alpha: 0.3) !default;
+$progressbar-range-bg: $base-accent !default;
+$progressbar-range-disabled-bg: color.change($base-accent, $alpha: 0.6) !default;
+$progressbar-range-indeterminate-color: $base-accent !default;
+$progressbar-label-color: $base-accent !default;
+$never-used: collector((
+"$progressbar-bg": $progressbar-bg,
+"$progressbar-range-bg": $progressbar-range-bg,
+"$progressbar-label-color": $progressbar-label-color,
+));

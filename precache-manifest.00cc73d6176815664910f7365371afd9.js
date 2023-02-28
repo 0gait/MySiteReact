@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "b64b38162f300d2fc775",
-    "url": "/MySiteReact/static/js/main.f22559b1.chunk.js"
+    "revision": "486c029050b2fc2364e0",
+    "url": "/MySiteReact/static/js/main.1fba0448.chunk.js"
   },
   {
     "revision": "dfe2926fd9faed1c99a2",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/MySiteReact/static/media/horario.a7bc5161.png"
   },
   {
-    "revision": "b690e4adc639c95803a9ba803bbdf3b6",
+    "revision": "e63edead2ff2b69d6e34b9656272f71a",
     "url": "/MySiteReact/index.html"
   }
 ];

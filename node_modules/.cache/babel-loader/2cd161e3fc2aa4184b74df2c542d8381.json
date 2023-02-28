@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { rerender as reRender } from 'inferno';\nimport { InfernoEffect } from './effect';\nexport var createReRenderEffect = function createReRenderEffect() {\n  return new InfernoEffect(function () {\n    reRender();\n  }, []);\n};","map":null,"metadata":{},"sourceType":"module"}

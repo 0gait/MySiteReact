@@ -40,7 +40,7 @@ const Weather = () => {
 
   const getWeather = async (lat, long) => {
     let res = await axios.get(
-      "http://api.openweathermap.org/data/2.5/weather",
+      "https://api.openweathermap.org/data/2.5/weather",
       {
         params: {
           lat: lat,
@@ -51,6 +51,7 @@ const Weather = () => {
         },
       }
     );
+    console.log(res);
     setWeather(res.data);
   };
 

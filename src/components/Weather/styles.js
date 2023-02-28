@@ -10,6 +10,11 @@ export const SWContainer = styled.div`
   align-content: center;
 `;
 
+export const SWContainer2 = styled.div`
+  top: 1000px;
+  left: 1000px;
+`;
+
 export const SWTitleContainer = styled.div`
   display: flex;
   padding: 5px;

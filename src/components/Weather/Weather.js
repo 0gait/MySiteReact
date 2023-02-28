@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
   CircularGauge,
@@ -21,6 +21,7 @@ import {
   SWText2,
   SWBodyDiv3,
   SWText3,
+  SWContainer2,
 } from "./styles";
 import { BiCurrentLocation } from "react-icons/bi";
 import { BsWind, BsSunrise, BsSunset } from "react-icons/bs";
@@ -70,9 +71,13 @@ const Weather = () => {
   };
 
   if (location === false) {
-    return <Fragment>É necessário ligar a localização no browser o/</Fragment>;
+    return (
+      <SWContainer2>
+        É necessário ligar a localização no browser o/
+      </SWContainer2>
+    );
   } else if (weather === false) {
-    return <Fragment>Carregando...</Fragment>;
+    return <SWContainer2>Carregando...</SWContainer2>;
   } else {
     return (
       <SWContainer>

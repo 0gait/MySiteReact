@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Button } from "devextreme-react/button";
 import { Popup } from "devextreme-react/popup";
 import { TextBox } from "devextreme-react/text-box";
-import { Container1, LinkTo } from "./styles";
+import { Container1 } from "./styles";
 
 const PopUp = () => {
   const [isPopupVisible, setPopupVisibility] = useState(false);

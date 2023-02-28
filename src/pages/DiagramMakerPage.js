@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import { SDContainer1 } from "./styles";
+import { Container3 } from "./styles";
 import DiagramEditor from "../components/DiagramEditor/DiagramEditor";
 
 const DiagramMakerPage = () => {
   useEffect(() => {}, []);
 
   return (
-    <SDContainer1>
+    <Container3>
       <DiagramEditor />
-    </SDContainer1>
+    </Container3>
   );
 };
 

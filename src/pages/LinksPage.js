@@ -1,5 +1,5 @@
 import React from "react";
-import { Table1, Container, Td, Links, TitleText } from "./styles";
+import { Table1, Container5, TD2, Links2, TitleText1 } from "./styles";
 import { AiOutlineCalendar, AiOutlineStock } from "react-icons/ai";
 import { FiLink2 } from "react-icons/fi";
 import { FaTv, FaCarAlt } from "react-icons/fa";
@@ -10,73 +10,73 @@ import { BsFillKeyFill, BsYoutube } from "react-icons/bs";
 
 const LinksPage = () => {
   return (
-    <Container>
-      <TitleText>
+    <Container5>
+      <TitleText1>
         <FiLink2 />
         {"\u00A0 "} Links
-      </TitleText>
+      </TitleText1>
       <Table1>
         <tr>
-          <Td>
-            <Links href={"https://pobre.tv"} target="_blank">
+          <TD2>
+            <Links2 href={"https://pobre.tv"} target="_blank">
               <FaTv /> {"\u00A0 "}Pobre TV
-            </Links>
-          </Td>
-          <Td>
-            <Links href={"https://www.windguru.cz/222544"} target="_blank">
+            </Links2>
+          </TD2>
+          <TD2>
+            <Links2 href={"https://www.windguru.cz/222544"} target="_blank">
               <TiWeatherCloudy /> {"\u00A0 "}Weather
-            </Links>
-          </Td>
+            </Links2>
+          </TD2>
         </tr>
         <tr>
-          <Td>
-            <Links href={"https://www.fpcanoagem.pt"} target="_blank">
+          <TD2>
+            <Links2 href={"https://www.fpcanoagem.pt"} target="_blank">
               <GiCanoe /> {"\u00A0 "}FPCanoagem
-            </Links>
-          </Td>
-          <Td>
-            <Links href={"F1 stream"} target="_blank">
+            </Links2>
+          </TD2>
+          <TD2>
+            <Links2 href={"F1 stream"} target="_blank">
               <FaCarAlt /> {"\u00A0 "}F1 stream
-            </Links>
-          </Td>
+            </Links2>
+          </TD2>
         </tr>
         <tr>
-          <Td>
-            <Links
+          <TD2>
+            <Links2
               href={"https://www.formula1.com/en/racing/2022.html"}
               target="_blank"
             >
               <AiOutlineCalendar /> {"\u00A0 "}F1 calendar
-            </Links>
-          </Td>
-          <Td>
-            <Links href={"https://pvpoke.com"} target="_blank">
+            </Links2>
+          </TD2>
+          <TD2>
+            <Links2 href={"https://pvpoke.com"} target="_blank">
               <AiOutlineStock /> {"\u00A0 "}PvPoke
-            </Links>
-          </Td>
+            </Links2>
+          </TD2>
         </tr>
         <tr>
-          <Td>
-            <Links href={"https://leekduck.com/events/"} target="_blank">
+          <TD2>
+            <Links2 href={"https://leekduck.com/events/"} target="_blank">
               <BiCalendarEvent /> {"\u00A0 "}PokeGo events
-            </Links>
-          </Td>
-          <Td>
-            <Links href={"https://csgostash.com"} target="_blank">
+            </Links2>
+          </TD2>
+          <TD2>
+            <Links2 href={"https://csgostash.com"} target="_blank">
               <BsFillKeyFill /> {"\u00A0 "}CSGO Stach
-            </Links>
-          </Td>
+            </Links2>
+          </TD2>
         </tr>
         <tr>
           {" "}
-          <Td>
-            <Links href={"https://www.youtube.com"} target="_blank">
+          <TD2>
+            <Links2 href={"https://www.youtube.com"} target="_blank">
               <BsYoutube /> {"\u00A0 "}Youtube
-            </Links>
-          </Td>
+            </Links2>
+          </TD2>
         </tr>
       </Table1>
-    </Container>
+    </Container5>
   );
 };
 

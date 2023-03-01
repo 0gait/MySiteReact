@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Container1 = styled.div`
-  margin-top: 10px;
+  width: 100%;
+  aspect-ratio: 10 / 3;
+  flex: 1;
   text-align: center;
   justify-content: center;
   align-content: center;
-  margin-left: 35px;
+  margin-left: 2rem;
   position: relative;
 `;
 
@@ -53,11 +55,11 @@ export const Row2 = styled.div`
 `;
 
 export const Row3 = styled.div`
-  padding: 40px;
+  padding: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   justify-content: center;
   align-content: center;
-  margin-bottom: 25px;
 `;
 
 export const Row4 = styled.div`
@@ -78,6 +80,8 @@ export const Row2Col_50 = styled.div`
   width: 50%;
 `;
 
+// ----------------------------------------------------------------
+
 export const Layer1 = styled.div`
   position: absolute;
   left: 0;
@@ -85,7 +89,7 @@ export const Layer1 = styled.div`
 
 export const Layer2 = styled.div`
   position: absolute;
-  left: 25%;
+  left: 20rem;
 `;
 
 // ----------------------------------------------------------------

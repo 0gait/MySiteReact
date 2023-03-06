@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/MySiteReact/static/media/logo.7c0272b7.svg"
   },
   {
-    "revision": "361e8c85c185560d1223735e93ec6271",
-    "url": "/MySiteReact/static/media/dxicons.361e8c85.woff"
-  },
-  {
     "revision": "a091c76c9b14a992ea5c4f414951565f",
     "url": "/MySiteReact/static/media/dxicons.a091c76c.woff2"
   },
   {
     "revision": "9acd66044b85738abc90e5c630fefad2",
     "url": "/MySiteReact/static/media/dxicons.9acd6604.ttf"
+  },
+  {
+    "revision": "361e8c85c185560d1223735e93ec6271",
+    "url": "/MySiteReact/static/media/dxicons.361e8c85.woff"
   },
   {
     "revision": "2d767ec1f991af9be766bd3e7870d3d4",

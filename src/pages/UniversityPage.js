@@ -11,6 +11,7 @@ import {
   Row4,
   Row2Col_50,
   Image,
+  Link2,
 } from "./styles";
 import { FiPaperclip } from "react-icons/fi";
 import { SiGmail } from "react-icons/si";
@@ -94,8 +95,17 @@ const UniversityPage = () => {
         <Row2Col_50>
           <List1>
             <GiBookshelf /> Disciplinas:
-            {/* <LI1>Coffee</LI1>
-            <LI1>Tea</LI1>
+            <LI1>
+              <Link2
+                href={
+                  "https://msprrtab.atlassian.net/jira/software/projects/RRTAB/boards/1/roadmap"
+                }
+                target="_blank"
+              >
+                Jira MSP
+              </Link2>
+            </LI1>
+            {/* <LI1>Tea</LI1>
             <LI1>Milk</LI1> */}
           </List1>
         </Row2Col_50>

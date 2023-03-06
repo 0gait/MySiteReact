@@ -7,7 +7,7 @@ export const Container1 = styled.div`
   text-align: center;
   justify-content: center;
   align-content: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
   position: relative;
 `;
 
@@ -108,7 +108,7 @@ export const TH1 = styled.th`
 `;
 
 export const TD1 = styled.td`
-  font-size: 18px;
+  font-size: 22px;
   padding: 12px;
 `;
 
@@ -116,7 +116,7 @@ export const TD2 = styled.td`
   font-weight: bold;
   width: 500px;
   height: 40px;
-  font-size: 18px;
+  font-size: 22px;
   padding: 12px;
 `;
 
@@ -177,7 +177,7 @@ export const Link1 = styled.a`
   padding: 12px;
 `;
 
-export const Links2 = styled.a`
+export const Link2 = styled.a`
   color: inherit;
   text-decoration: none;
   border-radius: 8px;
@@ -185,7 +185,8 @@ export const Links2 = styled.a`
     box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
     background: ${({ theme }) => theme.bg3};
   }
-  padding: 12px;
+  padding: 8px;
+  font-size: 16px;
 `;
 
 // ----------------------------------------------------------------

@@ -12,3 +12,5 @@ export const LinkTo = styled(Link)`
   color: inherit;
   font-size: 16px;
 `;
+
+export const Image = styled.img``;

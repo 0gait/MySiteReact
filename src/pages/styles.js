@@ -107,6 +107,13 @@ export const TH1 = styled.th`
   color: #b3001b;
 `;
 
+export const TH2 = styled.th`
+  font-weight: bold;
+  width: 230px;
+  height: 40px;
+  font-size: 22px;
+`;
+
 export const TD1 = styled.td`
   font-size: 20px;
   padding: 12px;
@@ -125,7 +132,7 @@ export const TD2 = styled.td`
 export const List1 = styled.ol`
   width: 100%;
   height: 40px;
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 8px;
   color: inherit;
   text-align: left;

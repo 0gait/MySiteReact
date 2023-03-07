@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import { FiPaperclip } from "react-icons/fi";
 import { SiGmail } from "react-icons/si";
-import { GiBookshelf } from "react-icons/gi";
+import { GiDefensiveWall } from "react-icons/gi";
 import {
   FaMediumM,
   FaUniversity,
@@ -94,7 +94,13 @@ const UniversityPage = () => {
       <Row4>
         <Row2Col_50>
           <List1>
-            <GiBookshelf /> Disciplinas:
+            <GiDefensiveWall /> {"\u00A0 "}
+            <GiDefensiveWall /> {"\u00A0 "}
+            <GiDefensiveWall /> {"\u00A0 "}
+            <GiDefensiveWall /> {"\u00A0 "}
+            <GiDefensiveWall /> {"\u00A0 "}
+            <GiDefensiveWall /> {"\u00A0 "}
+            <GiDefensiveWall /> 
             <LI1>
               <Link2
                 href={
@@ -105,8 +111,11 @@ const UniversityPage = () => {
                 Jira MSP
               </Link2>
             </LI1>
-            {/* <LI1>Tea</LI1>
-            <LI1>Milk</LI1> */}
+            <LI1>
+              <Link2 href={"https://wokwi.com/projects/new"} target="_blank">
+                Arduino
+              </Link2>
+            </LI1>
           </List1>
         </Row2Col_50>
         <Row2Col_50>

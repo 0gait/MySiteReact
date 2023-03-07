@@ -14,3 +14,9 @@ export const LinkTo = styled(Link)`
 `;
 
 export const Image = styled.img``;
+
+export const ContainerImage = styled.div`
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+`;

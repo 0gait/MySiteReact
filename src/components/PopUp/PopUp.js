@@ -3,29 +3,25 @@ import { Button } from "devextreme-react/button";
 import { Popup } from "devextreme-react/popup";
 import { TextBox } from "devextreme-react/text-box";
 import { Container1 } from "./styles";
-import { Image } from "./styles";
+import { Image, ContainerImage } from "./styles";
 
 const PopUp = () => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
-  const [inputValue, setInputValue] = useState();
   const [password, setPassword] = useState(false);
 
   const togglePopup = () => {
     setPopupVisibility(!isPopupVisible);
+    setPassword(false);
   };
 
   const keyUpFunction = (e) => {
     if (e.event.key === "Enter") {
-      if (inputValue === "magicRoom") {
+      if (e.component.option("value") === "magicRoom") {
         setPassword(true);
       } else {
         alert("Wrong password!!!");
       }
     }
-  };
-
-  const valueChanged = (e) => {
-    setInputValue(e.value);
   };
 
   return (
@@ -41,29 +37,26 @@ const PopUp = () => {
         >
           <Container1>
             Password:
-            <TextBox
-              onValueChanged={valueChanged}
-              onKeyDown={keyUpFunction}
-              width={250}
-              mode="password"
-            />
+            <TextBox onKeyUp={keyUpFunction} width={250} mode="password" />
           </Container1>
         </Popup>
       ) : (
         <Popup
-          title="Love of my live"
+          title="❤ Precious things ❤"
           visible={isPopupVisible}
           hideOnOutsideClick={true}
           onHiding={togglePopup}
-          width={800}
-          height={700}
+          width={900}
+          height={620}
         >
           <Container1>
-            <Image
-              // src={require("./assets/horario.png")}
-              width="518"
-              height="288"
-            />
+            <ContainerImage>
+              <Image
+                src={require("./assets/photo.jpg")}
+                width="650"
+                height="520"
+              />
+            </ContainerImage>
           </Container1>
         </Popup>
       )}

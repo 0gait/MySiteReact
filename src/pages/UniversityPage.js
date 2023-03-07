@@ -112,7 +112,7 @@ const UniversityPage = () => {
         <Row2Col_50>
           <Image
             src={require("./assets/horario.png")}
-            width="518"
+            width="516"
             height="288"
           />
         </Row2Col_50>

@@ -108,7 +108,7 @@ export const TH1 = styled.th`
 `;
 
 export const TD1 = styled.td`
-  font-size: 22px;
+  font-size: 20px;
   padding: 12px;
 `;
 

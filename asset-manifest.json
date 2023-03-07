@@ -1,17 +1,18 @@
 {
-  "main.js": "/MySiteReact/static/js/main.a8f4e125.chunk.js",
-  "main.js.map": "/MySiteReact/static/js/main.a8f4e125.chunk.js.map",
+  "main.js": "/MySiteReact/static/js/main.5b5bf6bf.chunk.js",
+  "main.js.map": "/MySiteReact/static/js/main.5b5bf6bf.chunk.js.map",
   "runtime~main.js": "/MySiteReact/static/js/runtime~main.6f832765.js",
   "runtime~main.js.map": "/MySiteReact/static/js/runtime~main.6f832765.js.map",
   "static/css/2.9243e05c.chunk.css": "/MySiteReact/static/css/2.9243e05c.chunk.css",
-  "static/js/2.db385b75.chunk.js": "/MySiteReact/static/js/2.db385b75.chunk.js",
-  "static/js/2.db385b75.chunk.js.map": "/MySiteReact/static/js/2.db385b75.chunk.js.map",
+  "static/js/2.b2ad2176.chunk.js": "/MySiteReact/static/js/2.b2ad2176.chunk.js",
+  "static/js/2.b2ad2176.chunk.js.map": "/MySiteReact/static/js/2.b2ad2176.chunk.js.map",
   "index.html": "/MySiteReact/index.html",
-  "precache-manifest.86bdce0fdebdd48cda04b6ddfacce747.js": "/MySiteReact/precache-manifest.86bdce0fdebdd48cda04b6ddfacce747.js",
+  "precache-manifest.5de95ef1275f2873e600d060867d2f65.js": "/MySiteReact/precache-manifest.5de95ef1275f2873e600d060867d2f65.js",
   "service-worker.js": "/MySiteReact/service-worker.js",
   "static/css/2.9243e05c.chunk.css.map": "/MySiteReact/static/css/2.9243e05c.chunk.css.map",
   "static/media/calendario.pdf": "/MySiteReact/static/media/calendario.2d767ec1.pdf",
   "static/media/dx.light.css": "/MySiteReact/static/media/dxicons.a091c76c.woff2",
   "static/media/horario.png": "/MySiteReact/static/media/horario.3166aabc.png",
-  "static/media/logo.svg": "/MySiteReact/static/media/logo.7c0272b7.svg"
+  "static/media/logo.svg": "/MySiteReact/static/media/logo.7c0272b7.svg",
+  "static/media/photo.jpg": "/MySiteReact/static/media/photo.97495f67.jpg"
 }

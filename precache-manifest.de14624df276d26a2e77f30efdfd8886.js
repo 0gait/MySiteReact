@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "c8291c460338185e2ae2",
-    "url": "/MySiteReact/static/js/main.b13bb369.chunk.js"
+    "revision": "2dd399d6f83814817ebd",
+    "url": "/MySiteReact/static/js/main.84eab2a0.chunk.js"
   },
   {
     "revision": "dfe2926fd9faed1c99a2",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/MySiteReact/static/media/dxicons.361e8c85.woff"
   },
   {
-    "revision": "9acd66044b85738abc90e5c630fefad2",
-    "url": "/MySiteReact/static/media/dxicons.9acd6604.ttf"
-  },
-  {
     "revision": "a091c76c9b14a992ea5c4f414951565f",
     "url": "/MySiteReact/static/media/dxicons.a091c76c.woff2"
+  },
+  {
+    "revision": "9acd66044b85738abc90e5c630fefad2",
+    "url": "/MySiteReact/static/media/dxicons.9acd6604.ttf"
   },
   {
     "revision": "97495f67185f3587025f978ec2d5b28d",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/MySiteReact/static/media/horario.3166aabc.png"
   },
   {
-    "revision": "9ac57ea4e2b51bf88d2697dd2c4f6bae",
+    "revision": "75d467050411c5ae118d294d375067ae",
     "url": "/MySiteReact/index.html"
   }
 ];

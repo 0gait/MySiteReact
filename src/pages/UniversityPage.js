@@ -100,7 +100,7 @@ const UniversityPage = () => {
             <GiDefensiveWall /> {"\u00A0 "}
             <GiDefensiveWall /> {"\u00A0 "}
             <GiDefensiveWall /> {"\u00A0 "}
-            <GiDefensiveWall /> 
+            <GiDefensiveWall />
             <LI1>
               <Link2
                 href={

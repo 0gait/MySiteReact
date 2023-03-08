@@ -99,6 +99,13 @@ export const Table1 = styled.table`
   text-align: left;
 `;
 
+export const Table2 = styled.table`
+  width: 100%;
+  text-align: left;
+  border-left: 8px solid #b3001b;
+  background-color: ${({ theme }) => theme.bg3};
+`;
+
 export const TH1 = styled.th`
   font-weight: bold;
   width: 500px;
@@ -194,6 +201,17 @@ export const Link2 = styled.a`
   }
   padding: 8px;
   font-size: 16px;
+`;
+
+export const Link3 = styled.a`
+  color: inherit;
+  text-decoration: none;
+  border-radius: 8px;
+  :hover {
+    box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
+    background: ${({ theme }) => theme.bg};
+  }
+  padding: 12px;
 `;
 
 // ----------------------------------------------------------------
